@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# instructions here: https://github.com/sickcodes/Docker-OSX#usbfluxd-iphone-usb---network-style-passthrough-osx-kvm-docker-osx
+
+sudo avahi-daemon
+sudo systemctl start usbmuxd
+sudo socat tcp-listen:5000,fork unix-connect:/var/run/usbmuxd
+sudo usbfluxd -f -n
