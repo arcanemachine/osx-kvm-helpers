@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# instructions here: https://github.com/sickcodes/Docker-OSX#usbfluxd-iphone-usb---network-style-passthrough-osx-kvm-docker-osx
+
+sudo service avahi-daemon restart
