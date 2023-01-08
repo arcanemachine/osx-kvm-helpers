@@ -2,5 +2,6 @@
 
 # instructions here: https://github.com/sickcodes/Docker-OSX#usbfluxd-iphone-usb---network-style-passthrough-osx-kvm-docker-osx
 
+sudo service avahi-daemon restart
 sudo systemctl restart usbmuxd
 sudo socat tcp-listen:5000,fork unix-connect:/var/run/usbmuxd

@@ -1,6 +1,6 @@
 # usb-passthrough
 
-This section made possible by `[this repo](https://github.com/sickcodes/Docker-OSX#usbfluxd-iphone-usb---network-style-passthrough-osx-kvm-docker-osx)`.
+This section made possible by [this repo](https://github.com/sickcodes/Docker-OSX#usbfluxd-iphone-usb---network-style-passthrough-osx-kvm-docker-osx).
 
 These scripts are used to easily enable USB-over-network passthrough for my macOS VM instances.
 
