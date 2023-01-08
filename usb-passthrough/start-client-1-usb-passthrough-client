@@ -1,0 +1,24 @@
+#!/bin/sh
+
+ip_address=192.168.1.100
+
+echo "This script should be run in the macOS VM, not the host. If you are running this script from the macOS VM, this message can be safely ignored.
+
+---
+
+Ensure that you have followed the instructions to set up usbfluxd in the macOS VM:
+
+brew install make automake autoconf libtool pkg-config gcc libimobiledevice usbmuxd
+
+git clone https://github.com/corellium/usbfluxd.git
+cd usbfluxd
+
+./autogen.sh
+make
+sudo make install
+
+---
+
+Using IP address ${ip_address}. Modify this script if you want to use a different IP address."
+
+sudo usbfluxd -f -r ${ip_address}:5000
