@@ -11,3 +11,10 @@ In the macOS VM, run the script `start-client-1`. The dependencies (listed in th
 To get this working, I always need to run these scripts *before* starting the VM. Sometimes, it doesn't work the first time and a VM restart is required.
 
 Good luck!
+
+
+## Troubleshooting
+
+- The scripts run but the device doesn't show up in Xcode
+  - Ensure that the underlying `systemd` services are working:
+    - e.g. `sudo systemctl status usbmuxd.service`
