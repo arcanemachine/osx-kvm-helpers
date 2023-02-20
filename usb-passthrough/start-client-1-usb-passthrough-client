@@ -21,4 +21,10 @@ sudo make install
 
 Using IP address ${ip_address}. Modify this script if you want to use a different IP address."
 
+
+# # old code (may still be useful)
+# sudo launchctl start usbmuxd
+# export PATH=/usr/local/sbin:${PATH}
+# sudo usbfluxd -f -r ${ip_address}:5000
+
 sudo usbfluxd -f -r ${ip_address}:5000
