@@ -18,3 +18,6 @@ Good luck!
 - The scripts run but the device doesn't show up in Xcode
   - Ensure that the underlying `systemd` services are working:
     - e.g. `sudo systemctl status usbmuxd.service`
+
+- The device shows up but sometimes disappears
+  - Try the action or command again. Sometimes the device is not detected on the first try.
