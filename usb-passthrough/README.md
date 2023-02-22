@@ -21,3 +21,6 @@ Good luck!
 
 - The device shows up but sometimes disappears
   - Try the action or command again. Sometimes the device is not detected on the first try.
+
+- The device is connected but not detected by the Flutter runner
+  - Connect the device via Xcode and try the build again.
