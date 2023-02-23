@@ -19,8 +19,10 @@ Good luck!
   - Ensure that the underlying `systemd` services are working:
     - e.g. `sudo systemctl status usbmuxd.service`
 
-- The device shows up but sometimes disappears
+- The device shows up but sometimes disappears.
   - Try the action or command again. Sometimes the device is not detected on the first try.
+  - Try stopping and starting the `docker-over-usb` client script and see if that fixes it.
+  - If in doubt, the device usually shows up in Xcode.
 
 - The device is connected but not detected by the Flutter runner
   - Connect the device via Xcode and try the build again.
