@@ -3,5 +3,11 @@
 # instructions here: https://github.com/sickcodes/Docker-OSX#usbfluxd-iphone-usb---network-style-passthrough-osx-kvm-docker-osx
 
 echo "This script should be run in the host, not the macOS VM. If you are running this script from the host, this message can be safely ignored."
+
+# part 1
 sudo service avahi-daemon start
 sudo avahi-daemon
+
+# part 2
+sudo systemctl restart usbmuxd
+sudo socat tcp-listen:5000,fork unix-connect:/var/run/usbmuxd
