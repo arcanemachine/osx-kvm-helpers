@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ip_address=192.168.1.100
+host_location=192.168.1.100
 
 echo "This script should be run in the macOS VM, not the host. If you are running this script from the macOS VM, this message can be safely ignored.
 
@@ -8,8 +8,12 @@ echo "This script should be run in the macOS VM, not the host. If you are runnin
 
 Ensure that you have followed the instructions to set up usbfluxd in the macOS VM:
 
-brew install make automake autoconf libtool pkg-config gcc libimobiledevice usbmuxd
+- Install Homebrew.
 
+- Install required dependencies:
+  - Via Homebrew:
+    - brew install make automake autoconf libtool pkg-config gcc libimobiledevice usbmuxd
+  - usbfluxd:
 git clone https://github.com/corellium/usbfluxd.git
 cd usbfluxd
 
@@ -20,12 +24,14 @@ sudo make install
 ---
 
 
-Using IP address ${ip_address}. Modify this script if you want to use a different IP address."
+Using host location: ${host_location}
+
+Modify this script if your host is located elsewhere."
 
 
 # # old code (may still be useful)
 # sudo launchctl start usbmuxd
 # export PATH=/usr/local/sbin:${PATH}
-# sudo usbfluxd -f -r ${ip_address}:5000
+# sudo usbfluxd -f -r ${host_location}:5000
 
-sudo usbfluxd -f -r ${ip_address}:5000
+sudo usbfluxd -f -r ${host_location}:5000
