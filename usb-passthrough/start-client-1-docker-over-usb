@@ -2,6 +2,10 @@
 
 host_location=192.168.1.100
 
+if [ "$1" != "" ]; then
+  host_location="$1"
+fi
+
 echo "This script should be run in the macOS VM, not the host. If you are running this script from the macOS VM, this message can be safely ignored.
 
 ---
@@ -13,7 +17,8 @@ Ensure that you have followed the instructions to set up usbfluxd in the macOS V
 - Install required dependencies:
   - Via Homebrew:
     - brew install make automake autoconf libtool pkg-config gcc libimobiledevice usbmuxd
-  - usbfluxd:
+  - Build and install usbfluxd:
+
 git clone https://github.com/corellium/usbfluxd.git
 cd usbfluxd
 
