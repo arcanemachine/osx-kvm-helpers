@@ -32,12 +32,10 @@ sudo make install
 
 Using host location: ${host_location}
 
-Modify this script if your host is located elsewhere."
+Modify this script if your host is located elsewhere.
+"
 
 
-# # old code (may still be useful)
-# sudo launchctl start usbmuxd
-# export PATH=/usr/local/sbin:${PATH}
-# sudo usbfluxd -f -r ${host_location}:5000
-
+sudo launchctl start usbmuxd
+export PATH=/usr/local/sbin:${PATH}
 sudo usbfluxd -f -r ${host_location}:5000
