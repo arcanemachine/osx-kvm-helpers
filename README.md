@@ -26,7 +26,12 @@ To use the USB-over-network stuff, check the second repo linked above, and check
     - Restart the Samba service:
       - `sudo systemctl restart smbd`
   - In the VM:
-    - In Finder:
-      - Go -> Connect to Server:
-        - Enter the URL of the host
-      - Connect as guest
+    - Setup a one-time connection to a remote server:
+      - Finder -> Go -> Connect to Server:
+        - Enter the URL of the host or share (e.g. `smb://192.168.1.100/` or `smb://192.168.1.100/your_share_name`)
+        - Connect as guest
+      - The share should now be available at `/Volumes/your_share_name`
+    - Mount the remote share automatically on boot:
+      - Set up the share using the instructions in the above section
+      - System Preferences -> Users and Groups -> Select User -> 'Login Items' tab
+        - Select the mounted share
