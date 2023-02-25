@@ -2,7 +2,7 @@
 
 # instructions here: https://github.com/sickcodes/Docker-OSX#usbfluxd-iphone-usb---network-style-passthrough-osx-kvm-docker-osx
 
-echo "This script should be run in the host, not the macOS VM. If you are running this script from the host, this message can be safely ignored."
+echo "This script should be run in the host, not the macOS VM. If you are running this script from the host, you can ignore this message."
 
 # part 1
 sudo service avahi-daemon start

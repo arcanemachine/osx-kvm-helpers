@@ -6,7 +6,8 @@ if [ "$1" != "" ]; then
   host_location="$1"
 fi
 
-echo "This script should be run in the macOS VM, not the host. If you are running this script from the macOS VM, this message can be safely ignored.
+echo "
+This script should be run in the macOS VM, not the host. If you are running this script from the macOS VM, you can ignore this message.
 
 ---
 
